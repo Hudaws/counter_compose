@@ -101,7 +101,7 @@ fun CounterScreen(
             },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF673AB7)
+                containerColor = Color(0xFF2196F3)
             )
         ) {
             Text("SIMPAN")
