@@ -229,3 +229,46 @@ fun CounterScreenPreview() {
         )
     }
 }
+
+/**
+ * DataDiriScreen merupakan layar yang menampilkan form input data diri (Nama)
+ * dan menampilkan nama tersimpan di bawah counter. Disediakan untuk memenuhi
+ * penamaan penugasan praktikum / tugas kuliah.
+ */
+@Composable
+fun DataDiriScreen(
+    counter: Int = 0,
+    savedName: String = "",
+    inputName: String = "",
+    onInputNameChange: (String) -> Unit = {},
+    onSaveName: () -> Unit = {},
+    onIncrement: () -> Unit = {},
+    onDecrement: () -> Unit = {},
+    onReset: () -> Unit = {},
+    modifier: Modifier = Modifier
+) {
+    CounterScreen(
+        counter = counter,
+        savedName = savedName,
+        inputName = inputName,
+        onInputNameChange = onInputNameChange,
+        onSaveName = onSaveName,
+        onIncrement = onIncrement,
+        onDecrement = onDecrement,
+        onReset = onReset,
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true, showSystemUi = true, name = "DataDiriScreen")
+@Composable
+fun DataDiriScreenPreview() {
+    CounterComposeTheme {
+        DataDiriScreen(
+            counter = 7,
+            savedName = "Nama Sesuai Presensi",
+            inputName = ""
+        )
+    }
+}
+
